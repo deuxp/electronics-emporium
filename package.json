@@ -1,7 +1,16 @@
 {
-  "name": "Learning-Electronic-Circuitry",
+  "name": "learning-electronic-circuitry",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Gottfried Kleinberger <friedi.frieds@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "watch:css": "tailwindcss build -i styles/global.css -o styles/compiled.css --watch",
+    "start": "yarn watch:css"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3"
+  }
 }
