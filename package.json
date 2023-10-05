@@ -5,7 +5,7 @@
   "author": "Gottfried Kleinberger <friedi.frieds@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "watch:css": "tailwindcss build -i styles/global.css -o styles/compiled.css --watch",
+    "watch:css": "tailwindcss build -i src/styles/global.css -o src/styles/compiled.css --watch",
     "start": "yarn watch:css"
   },
   "dependencies": {
