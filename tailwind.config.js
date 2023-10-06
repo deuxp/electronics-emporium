@@ -3,7 +3,10 @@ module.exports = {
   content: [],
   purge: ["./**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: { purpleBoard: "url('/img/5_162.jpg')" },
+      fontFamily: { exo: "'Exo 2', 'sans-serif'" },
+    },
   },
   plugins: [],
 };

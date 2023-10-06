@@ -6,15 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DBEC::Welcome</title>
   <link rel="stylesheet" href="/src/styles/compiled.css">
-  <script src="/scripts/templates.js"></script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,200;1,300&display=swap" rel="stylesheet">
 </head>
+<style>
+  @keyframes starAnimation {
+    0% {
+      transform: scale(0.7);
+      opacity: 0.1;
+    }
 
-<nav class="w-16 h-24 md:w-48 md:h-auto mx-auto">DBEC</nav>
+    50% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
 
-<body>
-  <h1 class="text-orange-300">Designing and Building Electronic Circuits: </h1>
-  <h2>A Comprehensive Wiki Guide</h2>
+    100% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+  }
+
+  .stars::before,
+  .stars::after {
+    content: "⚡️ 🦆 🌵";
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    animation: starAnimation 25s infinite;
+    animation-delay: 1s;
+  }
+</style>
+
+<body class="flex flex-col bg-zinc-300 text-slate-700 h-screen">
+  <nav class=" relative flex items-center bg-purpleBoard bg-cover bg-left-bottom  text-orange-300 h-16">
+    <div class="stars absolute inset-0"></div>
+    <div class="absolute inset-0 bg-stone-900 opacity-60"></div>
+    <p class="text-amber-600 font-exo pl-3 text-3xl z-10">DBEC</p>
+  </nav>
+
+  <main class=" bg-emerald-200 h-full">
+
+    <header class="bg-emerald-500 flex flex-col items-center p-3 justify-center">
+      <h1 class="text-3xl">Designing and Building Electronic Circuits </h1>
+
+      <h2 class="text-sm">A Comprehensive Wiki Guide</h2>
+    </header>
+  </main>
+  <footer class="flex justify-end p-1  absolute bottom-0 bg-indigo-400 w-full">
+    <div>copywrite 2023</div>
+  </footer>
 </body>
+
+<script src="/src/scripts/templates.js"></script>
 
 </html>
