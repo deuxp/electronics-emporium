@@ -5,7 +5,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: { purpleBoard: "url('/img/5_162.jpg')" },
-      fontFamily: { exo: "'Exo 2', 'sans-serif'" },
+      fontFamily: {
+        exo: ["Exo 2", "sans-serif"],
+        vibes: ["Great Vibes", "cursive"],
+      },
     },
   },
   plugins: [],
