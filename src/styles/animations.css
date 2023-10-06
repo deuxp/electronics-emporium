@@ -1,0 +1,29 @@
+@keyframes starAnimation {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.1;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+}
+
+.stars::before,
+.stars::after {
+  content: "⚡️ 🦆 🌵";
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 3rem;
+  color: white;
+  opacity: 0;
+  animation: starAnimation 25s infinite;
+  animation-delay: 1s;
+}
